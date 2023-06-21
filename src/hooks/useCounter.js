@@ -5,15 +5,15 @@ const useCounter = (countFxn) => {
     const [counter, setCounter] = useState(0)
     useEffect( () => {
        const interval = setInterval(() => {
-            // if (count > 0) {
-            //     setCounter((count) => count + 1)
+            // if (countFxn) {
+            //     setCounter(countFxn)
             // } else {
-            //     setCounter((count) => count - 1)
+            //     setCounter(countFxn)
             // }
 
             ////////////////////////////
 
-            setCounter(countFxn())
+            setCounter(countFxn)
         }, 1000)
         return () => clearInterval(interval);
     },[countFxn])
