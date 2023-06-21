@@ -14,11 +14,8 @@ const BackwardCounter = () => {
   //   return () => clearInterval(interval);
   // }, []);
 
-  const backward = (count) => {
-    return count - 1
-  }
 
-  const counter = useCounter( backward)
+  const counter = useCounter((prevCounter) => prevCounter - 1)
 
   return <Card>{counter}</Card>;
 };
