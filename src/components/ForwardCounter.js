@@ -14,14 +14,10 @@ const ForwardCounter = () => {
   //   return () => clearInterval(interval);
   // }, []);
 
-  const forward = () => {
-    let count = 1
-   return count++
-  }
 
-  const counter = useCounter((prevCount => prevCount + 1))
+  const counter = useCounter((prevCounter) => prevCounter + 1)
 
-  return <Card>{counter}</Card>;
-};
+  return <Card>{counter}</Card>
+}
 
 export default ForwardCounter;
